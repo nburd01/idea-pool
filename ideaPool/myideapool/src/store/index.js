@@ -1,7 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit';
+import ideaReducer from './ideaSlice'
 
 export default configureStore({
     reducer: {
-        //add reducers her after creation
-    }
-})
+        ideas: ideaReducer,
+    },
+});

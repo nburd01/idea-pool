@@ -19,6 +19,6 @@ const ideaSlice = createSlice({
     }
 })
 
-export const { addIdea } = todoSLice.actions;
+export const { addIdea } = ideaSlice.actions;
 
 export default ideaSlice.reducer;
