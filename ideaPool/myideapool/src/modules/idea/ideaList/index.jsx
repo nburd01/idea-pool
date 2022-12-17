@@ -11,7 +11,7 @@ export const IdeaList = () => {
   return (
     <ul className='list-group'>
 			{ideas.map((idea) => (
-				<IdeaItem id={idea.id} title={idea.title} completed={idea.completed} />
+				<IdeaItem id={idea.id} title={idea.title} Impact={idea.impact} Ease={idea.ease} Confidence={idea.confidence} completed={idea.completed} />
 			))}
 		</ul>
   )
