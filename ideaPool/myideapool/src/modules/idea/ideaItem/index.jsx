@@ -1,8 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { deleteIdea } from '../../../store/ideaSlice';
+
 
 const IdeaItem = ({ id, title,impact, ease, confidence, completed }) => {
 	const dispatch = useDispatch();
+
+    const handleDeleteClick = () => {
+		dispatch(deleteIdea({ id }));
+	};
 
 	return (
 		<li className="list-group-item">
@@ -18,7 +24,7 @@ const IdeaItem = ({ id, title,impact, ease, confidence, completed }) => {
 					{confidence}
 					{completed}
 				</span>
-				<button className='btn btn-danger'>
+				<button onClick={handleDeleteClick} className='btn btn-danger'>
 					Delete
 				</button>
 			</div>
