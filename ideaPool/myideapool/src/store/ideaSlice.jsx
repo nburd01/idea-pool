@@ -18,10 +18,13 @@ const ideaSlice = createSlice({
             completed: false
           };
           state.push(newIdea);
+        },
+        deleteIdea: (state, action) => {
+          return state.filter((idea) => idea.id !== action.payload.id);
         }
     }
 })
 
-export const { addIdea } = ideaSlice.actions;
+export const { addIdea, deleteIdea } = ideaSlice.actions;
 
 export default ideaSlice.reducer;
