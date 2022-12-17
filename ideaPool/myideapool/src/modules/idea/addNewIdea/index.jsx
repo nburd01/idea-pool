@@ -22,7 +22,7 @@ export const AddNewIdea = () => {
 				placeholder='Add todo...'
 				value={value}
 				onChange={(event) => setValue(event.target.value)}
-			></input>
+			/>
 
 			<button type='submit' className='btn btn-primary mb-2'>
 				Submit
